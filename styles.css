@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
+  font-family: "Sixtyfour Convergence", sans-serif;
   background-color: #f0f0f0;
   color: #fff;
   margin-top: 50px;
@@ -27,6 +27,16 @@ h1 {
 
 #eightBallImage:hover {
   transform: scale(1.1);
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+#eightBallImage.shake {
+  animation: shake 0.5s ease;
 }
 
 #response {
