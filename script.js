@@ -10,7 +10,15 @@ function getMagic8BallResponse() {
   return responses[randomIndex];
 }
 
-document.getElementById("eightBallImage").addEventListener("click", () => {
+function displayResponse() {
+  const question = document.getElementById("questionInput").value.trim();
+
+  // Check if a question was entered
+  if (question === "") {
+    document.getElementById("response").textContent = "Please ask a question first!";
+    return;
+  }
+
   const eightBallImage = document.getElementById("eightBallImage");
   eightBallImage.classList.add("shake");
 
@@ -19,4 +27,12 @@ document.getElementById("eightBallImage").addEventListener("click", () => {
     const response = getMagic8BallResponse();
     document.getElementById("response").textContent = `✨ Magic 8 Ball says: ${response} ✨`;
   }, 500);
+}
+
+document.getElementById("eightBallImage").addEventListener("click", displayResponse);
+
+document.getElementById("questionInput").addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    displayResponse();
+  }
 });
