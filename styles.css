@@ -1,4 +1,32 @@
 body {
   display: flex;
-  
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #444;
+}
+
+#eightBallImage {
+  width: 200px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+#eightBallImage:hover {
+  transform: scale(1.1);
+}
+
+#response {
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-align: center;
+  color: #444;
+  font-weight: bold;
 }
