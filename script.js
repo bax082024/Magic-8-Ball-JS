@@ -10,5 +10,8 @@ function getMagic8BallResponse() {
   return responses[randomIndex];
 }
 
-
+document.getElementById("eightBallImage").addEventListener("click", () => {
+  const response = getMagic8BallResponse();
+  document.getElementById("response").textContent = '✨ Magic 8 Ball says: ${response} ✨'
+})
 
