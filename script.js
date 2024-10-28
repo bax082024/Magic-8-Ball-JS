@@ -11,6 +11,12 @@ function getMagic8BallResponse() {
 }
 
 document.getElementById("eightBallImage").addEventListener("click", () => {
-  const response = getMagic8BallResponse();
-  document.getElementById("response").textContent = `✨ Magic 8 Ball says: ${response} ✨`;
+  const eightBallImage = document.getElementById("eightBallImage");
+  eightBallImage.classList.add("shake");
+
+  setTimeout(() => {
+    eightBallImage.classList.remove("shake");
+    const response = getMagic8BallResponse();
+    document.getElementById("response").textContent = `✨ Magic 8 Ball says: ${response} ✨`;
+  }, 500);
 });
