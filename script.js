@@ -13,7 +13,6 @@ function getMagic8BallResponse() {
 function displayResponse() {
   const question = document.getElementById("questionInput").value.trim();
 
-  // Check if a question was entered
   if (question === "") {
     document.getElementById("response").textContent = "Please ask a question first!";
     return;
@@ -28,6 +27,7 @@ function displayResponse() {
     document.getElementById("response").textContent = `✨ Magic 8 Ball says: ${response} ✨`;
   }, 500);
 }
+
 
 document.getElementById("eightBallImage").addEventListener("click", displayResponse);
 
