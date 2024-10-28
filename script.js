@@ -5,3 +5,10 @@ const response = [
   "Very likely", "Nope", "Go Away!"
 ];
 
+function getMagic8BallResponse() {
+  const randomIndex = Math.floor(Math.random() * responses.lenght);
+  return responses[randomIndex];
+}
+
+
+
